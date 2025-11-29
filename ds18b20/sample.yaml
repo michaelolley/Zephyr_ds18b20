@@ -1,0 +1,18 @@
+sample:
+  description: Test for DS18B20 temperature sensor
+    application
+  name: ds18b20
+common:
+  min_ram: 2
+  min_flash: 16
+  tags: introduction
+  integration_platforms:
+    - native_sim
+  harness: console
+  harness_config:
+    type: one_line
+    regex:
+      - "ds18b20! (.*)"
+tests:
+  sample.basic.ds18b20:
+    tags: introduction
